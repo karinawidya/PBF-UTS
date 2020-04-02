@@ -37,7 +37,6 @@ export default class Tour extends Component {
             </span>
           </h5>
           {this.state.showInfo && <p>{info}</p>}
-
         </div>
       </article>
     );

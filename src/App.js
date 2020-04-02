@@ -1,7 +1,7 @@
 import React, { Component } from "react";
-import Navbar from "./components/Navbar/Navbar";
+import { Navbar } from "./components/Navbar/Navbar";
 import "./App.scss";
-import TourList from "./components/TourList";
+import TourList from "./components/TourList/TourList";
 
 class App extends Component {
   render() {

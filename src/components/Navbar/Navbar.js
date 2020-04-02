@@ -1,28 +1,26 @@
-import React from "react";
+import React, { Component } from "react";
 import "./Navbar.scss";
 import logo from "../../logo.svg";
+import { NavLink } from 'react-router-dom';
 
-export default function Navbar() {
-  return (
-    <nav className="navbar">
-      <img src={logo} alt="city tours logo" />
-      <ul className="nav-links">
-        <li>
-          <a href="tourData.js" className="nav-link">
-            home
+export class Navbar extends Component {
+  render() {
+    return (
+      <nav className="navbar">
+        <img src={logo} alt="city tours logo" />
+        <ul className="nav-links">
+          <li>
+            <NavLink className="nav-link" to="/home">
+              home
+          </NavLink>
+          </li>
+          <li>
+            <a href="/" className="nav-link active">
+              tours
           </a>
-        </li>
-        <li>
-          <a href="" className="nav-link">
-            about
-          </a>
-        </li>
-        <li>
-          <a href="/" className="nav-link active">
-            tours
-          </a>
-        </li>
-      </ul>
-    </nav>
-  );
+          </li>
+        </ul>
+      </nav>
+    );
+  }
 }
